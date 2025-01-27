@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Schedule Timetable</title>
+    <style>
+  
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            
+            background-size: cover;
+            color: #333;
+            
+        }
+        body {
+  background-image: url('https://images.unsplash.com/photo-1535535112387-56ffe8db21ff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRyYWlufGVufDB8fDB8fHww');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+        h1 {
+            text-align: center;
+            color: #2d6a4f;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            background-color:(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .timetable-container {
+            width: 90%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .timetable thead {
+            background-color: #52b788;
+            color: #ffffff;
+        }
+        .timetable th, .timetable td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .timetable th {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .train-name {
+            background-color: #2d6a4f;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        .station-info {
+            font-size: 0.85em;
+            color: #555;
+        }
+        .nearby-bus {
+            color: #52b788;
+            font-weight: bold;
+        }
+        .timetable tbody tr:nth-child(even) {
+            background-color: rgba(244, 244, 244, 0.9);
+        }
+        .timetable tbody tr:hover {
+            background-color: rgba(237, 246, 249, 0.9);
+        }
+        .book-now a {
+            text-decoration: none;
+            background-color: #2d6a4f;
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .book-now a:hover {
+            background-color: #40916c;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.85em;
+            color: #666;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1></h1>
+
+    <div class="timetable-container">
+        <table class="timetable">
+            <thead>
+                <tr>
+                    <th>Train</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Arrival</th>
+                    <th>Departure</th>
+                    <th>Distance (km)</th>
+                    <th>AC Cost (INR)</th>
+                    <th>Non-AC Cost (INR)</th>
+                    <th>Book Now</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ahilyanagari Express Schedule -->
+                <tr class="train-name">
+                    <td colspan="9">Ahilyanagari Express - Madhya Pradesh to Kochuveli</td>
+                </tr>
+                <tr>
+                    <td>Ahilyanagari Express</td>
+                    <td>Indore (MP)</td>
+                    <td>Ujjain (MP)</td>
+                    <td>-</td>
+                    <td>08:10 AM</td>
+                    <td>55</td>
+                    <td>150</td>
+                    <td>90</td>
+                    <td class="book-now"><a href="#">Book Now</a></td>
+                </tr>
+                <tr class="station-info">
+                    <td colspan="9" class="nearby-bus">Nearby Bus Stop: Indore Bus Stand</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Ujjain (MP)</td>
+                    <td>Ratlam (MP)</td>
+                    <td>09:00 AM</td>
+                    <td>09:10 AM</td>
+                    <td>70</td>
+                    <td>170</td>
+                    <td>110</td>
+                    <td class="book-now"><a href="#">Book Now</a></td>
+                </tr>
+                <tr class="station-info">
+                    <td colspan="9" class="nearby-bus">Nearby Bus Stop: Ujjain Central Bus Stop</td>
+                </tr>
+
+                <!-- Ananthapuri Express Schedule -->
+                <tr class="train-name">
+                    <td colspan="9">Ananthapuri Express - Kollam to Chennai Egmore</td>
+                </tr>
+                <tr>
+                    <td>Ananthapuri Express</td>
+                    <td>Kollam (Kerala)</td>
+                    <td>Madurai (Tamil Nadu)</td>
+                    <td>-</td>
+                    <td>08:30 AM</td>
+                    <td>250</td>
+                    <td>300</td>
+                    <td>200</td>
+                    <td class="book-now"><a href="#">Book Now</a></td>
+                </tr>
+                <tr class="station-info">
+                    <td colspan="9" class="nearby-bus">Nearby Bus Stop: Kollam KSRTC Bus Station</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Madurai (Tamil Nadu)</td>
+                    <td>Trichy (Tamil Nadu)</td>
+                    <td>11:20 AM</td>
+                    <td>11:30 AM</td>
+                    <td>150</td>
+                    <td>220</td>
+                    <td>150</td>
+                    <td class="book-now"><a href="#">Book Now</a></td>
+                </tr>
+                <tr class="station-info">
+                    <td colspan="9" class="nearby-bus">Nearby Bus Stop: Madurai Central Bus Stand</td>
+                </tr>
+
+                <!-- Anga Express Schedule -->
+                <tr class="train-name">
+                    <td colspan="9">Anga Express - Baiyapanahalli Terminal to Bhagalpur</td>
+                </tr>
+                <tr>
+                    <td>Anga Express</td>
+                    <td>Baiyapanahalli</td>
+                    <td>Jolarpettai</td>
+                    <td>-</td>
+                    <td>05:30 PM</td>
+                    <td>200</td>
+                    <td>280</td>
+                    <td>180</td>
+                    <td class="book-now"><a href="#">Book Now</a></td>
+                </tr>
+                <tr class="station-info">
+                    <td colspan="9" class="nearby-bus">Nearby Bus Stop: Baiyapanahalli Bus Stand</td>
+                </tr>
+
+                <!-- Vande Bharat Chennai-Coimbatore -->
+                <tr class="train-name">
+                    <td colspan="9">Vande Bharat - Chennai to Coimbatore (AC and Non-AC)</td>
+                </tr>
+                <tr>
+                    <td>Vande Bharat</td>
+                    <td>Chennai (Tamil Nadu)</td>
+                    <td>Salem (Tamil Nadu)</td>
+                    <td>06:00 AM</td>
+                    <td>06:10 AM</td>
+                    <td>210</td>
+                    <td>400</td>
+                    <td>250</td>
+                    <td class="book-now"><a href="#">Book Now</a></td>
+                </tr>
+                <tr class="station-info">
+                    <td colspan="9" class="nearby-bus">Nearby Bus Stop: Chennai Central Bus Stand</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Salem (Tamil Nadu)</td>
+                    <td>Coimbatore (Tamil Nadu)</td>
+                    <td>09:00 AM</td>
+                    <td>09:10 AM</td>
+                    <td>300</td>
+                    <td>500</td>
+                    <td>300</td>
+                    <td class="book-now"><a href="#">Book Now</a></td>
+                </tr>
+                <tr class="station-info">
+                    <td colspan="9" class="nearby-bus">Nearby Bus Stop: Salem Old Bus Stand</td>
+                </tr>

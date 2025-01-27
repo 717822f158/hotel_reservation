@@ -1,0 +1,79 @@
+/* Main container styling */
+.container {
+    width: 85%;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header styling */
+.container h2 {
+    text-align: center;
+    color: #004aad;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.train-schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.train-schedule th, .train-schedule td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.train-schedule thead th {
+    background-color: #004aad;
+    color: white;
+    font-weight: bold;
+}
+
+.train-schedule tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.train-schedule tbody tr:hover {
+    background-color: #eaf3ff;
+}
+
+/* Availability color styles */
+.train-schedule td {
+    font-size: 14px;
+}
+
+.train-schedule td:nth-child(9) {
+    font-weight: bold;
+}
+
+.train-schedule td:nth-child(9):contains("Available") {
+    color: green;
+}
+
+.train-schedule td:nth-child(9):contains("Unavailable") {
+    color: red;
+}
+
+.train-schedule td:nth-child(9):contains("Limited") {
+    color: orange;
+}
+
+/* Button styling */
+.book-now {
+    background-color: #004aad;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.book-now:hover {
+    background-color: #002b6f;
+}
